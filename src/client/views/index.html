@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Travel App</title>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+
+            <div class="lowerNav">
+                <a href="#.html">Home</a>
+                <a href="#.html">Most Visted</a>
+                <a href="#.html">Booking</a>
+                <a href="#.html">WishList</a>
+            </div>
+        </header>
+
+        <!---------------------------------------------------------------------------------------------------------------------->
+
+        <form>
+            <label for="dName">Destination</label>
+            <input type="text" id="desName" name="destination" placeholder="Please Enter Your Destination">
+
+            <label for="depName">Departure</label>
+            <input type="date" id="date_start" aria-label="Date">
+
+            <label for="dName">Return</label>
+            <input type="date" id="date_end" aria-label="Date">
+
+            <button class="btn btn2" id="button_search">Search</button>
+
+        </form>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <div id="test1"></div>
+
+                </div>
+                <div class="modal-body">
+
+                    <div id="test2"></div>
+                    <div id="test4"></div>
+
+                </div>
+                <div class="modal-footer">
+                    <div id="test3"></div>
+                    <button class="btn btn2" onclick="window.print()">print</button>
+                </div>
+            </div>
+
+        </div>
+        <!---------------------------------------------------------------------------------------------------------------------->
+        <div class="box" id="bx1">
+            <section class="section1">
+                <div class="img1 imgBox">
+                    <a href="#.html">
+                        <div id="photo1" class="imgSize"></div>
+                    </a>
+
+                    <a href="#.html" class="floatText">London</a>
+                </div>
+
+            </section>
+        </div>
+        <div class="box" id="bx2">
+            <section class="section1">
+                <div class="img2 imgBox">
+                    <a href="#.html">
+                        <div id="photo2" class="imgSize"></div>
+                    </a>
+                    <a href="#.html" class="floatText">Paris</a>
+
+                </div>
+
+            </section>
+        </div>
+
+        <div class="box" id="bx3">
+            <section class="section1">
+                <div class="img3 imgBox">
+                    <a href="#.html">
+                        <div id="photo3" class="imgSize"></div>
+                    </a>
+
+                    <a href="#.html" class="floatText">Egypt</a>
+                </div>
+
+            </section>
+        </div>
+
+
+        <div class="box" id="bx4">
+            <section class="section1">
+                <div class="img4 imgBox">
+                    <a href="#.html">
+                        <div id="photo4" class="imgSize"></div>
+                    </a>
+
+                    <a href="#.html" class="floatText">Italy</a>
+
+                </div>
+
+            </section>
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("/service-worker.js")
+                    .then((registration) => {
+                        console.log("SW registered: ", registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log("SW registration failed: ", registrationError);
+                    });
+            });
+        }
+
+    </script>
+
+
+</body>
+
+</html>

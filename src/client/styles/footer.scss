@@ -1,0 +1,68 @@
+footer {
+
+    margin-top: 20px;
+    background-color: rgb(194, 195, 151);
+
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    width: auto;
+    height: 50px;
+
+}
+
+.foot {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    align-items: center;
+    float: left;
+
+
+
+
+
+}
+
+#facebook {
+    background-image: url(../media/facebook.png);
+    width: 20px;
+    height: 20px;
+
+
+}
+
+#instagram {
+    background-image: url(../media/instagram.png);
+    width: 20px;
+    height: 20px;
+
+}
+
+#twitter {
+    background-image: url(../media/twitter.png);
+    width: 20px;
+    height: 20px;
+
+
+}
+
+
+
+// @media(min-width:768px) {
+//     footer {
+//         background-color: rgb(251, 255, 0);
+
+
+//     }
+
+
+// }
+
+// @media(min-width:1024px) {
+//     footer {
+//         background-color: red;
+//         margin-top: 100px;
+//     }
+
+// }

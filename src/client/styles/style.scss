@@ -1,0 +1,446 @@
+body {
+
+    background: linear-gradient(to right,
+            #4f4f51 0%,
+            #4f4f51 50%,
+            #d6d6d6 50%,
+            #d6d6d6 100%);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+
+
+    grid-template-areas:
+        "hd"
+        "fm"
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "ft";
+
+
+}
+
+.btn2 {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+
+
+.btn:hover {
+    background-color: #e7e7e7;
+    color: white;
+}
+
+#photo1 {
+    background-image: url(../media/london.jpg);
+
+}
+
+#photo2 {
+    background-image: url(../media/paris.jpg);
+
+}
+
+#photo3 {
+    background-image: url(../media/pyramids.jpg);
+
+}
+
+#photo4 {
+    background-image: url(../media/italy2.jpg);
+
+}
+
+.imgSize {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+
+form {
+    grid-area: fm;
+    width: 80%;
+    height: 200px;
+
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 50px 20px 20px 30px;
+
+    display: grid;
+
+}
+
+
+.imgBox {
+    width: 350px;
+    height: 150px;
+
+    width: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+
+}
+
+
+
+
+.floatText {
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    width: 93%;
+    height: 25%;
+    margin-top: -40px;
+    opacity: 80%;
+    padding-left: 20px;
+    border-radius: 3%;
+    text-decoration: none;
+    color: black;
+}
+
+
+.degree {
+    padding-left: 150px;
+}
+
+.img1 {
+    grid-area: img1;
+
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.img3 {
+    grid-area: img3;
+}
+
+.img4 {
+    grid-area: img4;
+
+}
+
+.sideBar {
+    display: none;
+}
+
+.lowerNav {
+    overflow: hidden;
+    background-color: rgb(24, 22, 22);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.lowerNav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 8px;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: -90px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #4f4f51;
+    color: #d6d6d6;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #4f4f51;
+    color: white;
+    height: 350px;
+
+}
+
+#pixbay {
+    width: 200px;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 10px;
+
+}
+
+/* ---------------------------- Tablet Size ---------------------------- */
+@media(min-width:768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "hd  hd"
+            "fm fm"
+            "img1  img2"
+            "img3  img4"
+            "ft  ft";
+
+
+    }
+
+    .box {
+        border-radius: 1px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 1);
+        margin-top: 10px;
+        width: 300px;
+        height: 300px;
+        margin-left: 40px;
+
+    }
+
+
+
+    #bx1 {
+        background-color: #d6d6d6;
+
+    }
+
+    #bx2 {
+        background-color: #4f4f51;
+
+    }
+
+    #bx3 {
+        background-color: #d6d6d6;
+
+    }
+
+    #bx4 {
+        background-color: #4f4f51;
+
+    }
+
+    .imgBox {
+        width: 280px;
+        height: 250px;
+        background-size: cover;
+        margin-left: 10px;
+        margin-top: 30px;
+
+    }
+
+    form {
+        margin-left: 60px;
+        height: 250px;
+
+    }
+
+    .floatText {
+        position: relative;
+        bottom: 20px;
+
+    }
+
+    #pixbay {
+        width: 500px;
+        height: 300px;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+
+
+}
+
+/* ---------------------------- Labtop Size ---------------------------- */
+@media(min-width:1024px) {
+    body {
+        font-size: 25px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "hd  hd"
+            "fm fm "
+            "img1  img2"
+            "img3  img4"
+            "ft  ft";
+
+
+    }
+
+    .box {
+        border-radius: 1px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 1);
+        margin-top: 10px;
+        width: 450px;
+        height: 400px;
+        margin-left: 40px;
+
+    }
+
+
+
+    #bx1 {
+        background-color: #d6d6d6;
+
+    }
+
+    #bx2 {
+        background-color: #4f4f51;
+
+    }
+
+    #bx3 {
+        background-color: #d6d6d6;
+
+    }
+
+    #bx4 {
+        background-color: #4f4f51;
+
+    }
+
+    .imgBox {
+        width: 430px;
+        height: 350px;
+        background-size: cover;
+        margin-left: 10px;
+        margin-top: 30px;
+
+    }
+
+    form {
+        margin-left: 60px;
+        height: 400px;
+
+    }
+
+    #desName,
+    #desName::placeholder {
+        font-size: 15px;
+    }
+
+    #date_start,
+    #date_start::placeholder {
+        font-size: 20px;
+    }
+
+    #date_end,
+    #date_end::placeholder {
+        font-size: 20px;
+    }
+
+    .floatText {
+        width: 95%;
+        position: relative;
+        bottom: 48px;
+
+    }
+
+    #pixbay {
+        width: 600px;
+        height: 300px;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+
+}
