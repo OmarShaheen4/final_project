@@ -74,16 +74,22 @@ function performAction(e) {
                 allData.country = cityData.geonames[0].countryName;
                 console.log("The Second All Data: ", allData) // for Testing
 
-                // calling pixabayApi function by passing country name
-                pixabayApi(allData.country)
+                weatherbitApi(weatherbitApiReqURL, allData)
                     .then(res => {
+                        allData.currentTemp = res.data[0].temp
+                        console.log("Current Temp: ", allData.currentTemp)
 
-                        // store the output of the api to objcet allData
-                        allData.img = res.hits[0].webformatURL;
-                        console.log("The Image: ", allData.img) // for Testing
+                        // calling pixabayApi function by passing country name
+                        pixabayApi(allData.country)
+                            .then(res => {
 
-                        // calling updateUi function by passing allData object
-                        updateUi(allData)
+                                // store the output of the api to objcet allData
+                                allData.img = res.hits[0].webformatURL;
+                                console.log("The Image: ", allData.img) // for Testing
+
+                                // calling updateUi function by passing allData object
+                                updateUi(allData)
+                            })
                     })
             })
 
